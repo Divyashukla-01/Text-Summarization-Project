@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsible AI Text Summarizer</title>
+    <style>
+        body {
+            background: #f2f6ff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 60%;
+            background: #fff;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #2d2d82;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 15px;
+            border-radius: 8px;
+            border: 1px solid #999;
+            resize: none;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 12px 28px;
+            font-size: 16px;
+            border: none;
+            background: #2d2d82;
+            color: #fff;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1f1f5c;
+        }
+
+        .output-box {
+            margin-top: 25px;
+            background: #eef0ff;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 5px solid #2d2d82;
+        }
+
+        .footer{
+            text-align: center;
+            margin-top: 20px;
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <h2>🧠 Responsible AI Text Summarizer</h2>
+
+        <form method="POST">
+            <textarea name="text" rows="8" placeholder="Enter paragraph here..."></textarea>
+
+            <button type="submit">Generate Summary</button>
+        </form>
+
+        {% if output %}
+        <div class="output-box">
+            <h3>Summary Output:</h3>
+            <p>{{ output }}</p>
+        </div>
+        {% endif %}
+    </div>
+
+    <p class="footer">Powered by Gemini | Built with Flask | Responsible AI </p>
+
+</body>
+</html>
